@@ -143,20 +143,23 @@ window.addEventListener('load', () => {
 
     introSound.volume = 0.6;
 
-    introSound.play().catch(() => {
-        console.log('Intro sound was blocked by the browser.');
-    });
+    introScreen.addEventListener('click', () => {
 
-    setTimeout(() => {
+        introSound.currentTime = 0;
+
+        introSound.play().catch(() => {
+            console.log('Intro sound could not be played.');
+        });
+
         introScreen.style.opacity = '0';
         introScreen.style.transition = 'opacity 0.8s ease';
 
         setTimeout(() => {
             introScreen.style.display = 'none';
         }, 800);
-
-    }, 1800);
+    });
 });
+
 const music = document.getElementById('background-music');
 const musicToggle = document.getElementById('music-toggle');
 const musicPrevious = document.getElementById('music-previous');
