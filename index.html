@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reiven | Computer Science Student</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+<!-- Intro Screen -->
+<div id="intro-screen">
+    <div class="intro-brand">
+        <div class="intro-logo">R.</div>
+        <div class="intro-name">REIVEN JOSH SANTIAGO</div>
+    </div>
+</div>
+
+<audio id="intro-sound" src="media/intro.mp3" preload="auto"></audio>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+
+            <a href="#" class="logo">REIVEN<span>.</span></a>
+
+            <ul class="nav-links">
+    <li><a href="#home">HOME</a></li>
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#skills">SKILLS</a></li>
+    <li><a href="#projects">PROJECTS</a></li>
+    <li><a href="#education">EDUCATION</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+</ul>
+
+        </nav>
+    </header>
+
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+
+        <!-- Background layer (crossfading cover photos) -->
+        <div class="hero-bg">
+            <img src="images/reiven-hero-16x9.jpg" alt="" class="hero-bg-img active" id="heroBgLayerA">
+            <img src="" alt="" class="hero-bg-img" id="heroBgLayerB">
+            <div class="hero-gradient-left"></div>
+            <div class="hero-gradient-bottom"></div>
+        </div>
+
+        <div class="hero-content">
+
+            <p class="intro">N&nbsp;&nbsp;PORTFOLIO ORIGINAL</p>
+
+            <h1>REIVEN<br>
+                <span>JOSH SANTIAGO</span>
+            </h1>
+
+            <div class="hero-meta">
+                <span class="match">98% Match</span>
+                <span class="meta-year">2026</span>
+                <span class="meta-rating">CS</span>
+                <span class="meta-hd">HD</span>
+            </div>
+
+            <h2>COMPUTER SCIENCE STUDENT</h2>
+
+            <p class="description">
+                I enjoy building things from scratch, solving problems,
+                and turning ideas into something real.
+            </p>
+
+            <div class="hero-genres">
+                <span>Java</span>
+                <span>Python</span>
+                <span>Web Development</span>
+                <span>MySQL</span>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn">
+                    <span class="play-icon">&#9658;</span> VIEW MY WORK
+                </a>
+
+                <a href="#contact" class="btn secondary-btn">
+                    <span class="info-icon">&#9432;</span> CONTACT ME
+                </a>
+                
+                <a href="Reiven-CV/Reiven-CV.docx" class="btn secondary-btn" download>
+                     <span class="info-icon">&#128196;</span> DOWNLOAD CV
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Temporary Sections -->
+   <!-- About Me Section -->
+<section id="about" class="about-section">
+
+    <div class="about-container">
+
+    <!-- About Me Photo -->
+<div class="about-photo">
+    <div class="about-photo-glow"></div>
+
+    <button class="about-arrow about-arrow-left" aria-label="Previous photo">&#10094;</button>
+
+    <img src="images/about-me.jpg" class="about-slide active" alt="Photo of Reiven">
+    <img src="images/about-me-2.jpg" class="about-slide" alt="Photo of Reiven">
+    <img src="images/about-me-3.jpg" class="about-slide" alt="Photo of Reiven">
+    <img src="images/about-me-4.jpg" class="about-slide" alt="Photo of Reiven">
+    <img src="images/about-me-5.jpg" class="about-slide" alt="Photo of Reiven">
+
+    <button class="about-arrow about-arrow-right" aria-label="Next photo">&#10095;</button>
+
+    <div class="about-dots">
+        <button class="about-dot active" data-index="0" aria-label="Go to photo 1"></button>
+        <button class="about-dot" data-index="1" aria-label="Go to photo 2"></button>
+        <button class="about-dot" data-index="2" aria-label="Go to photo 3"></button>
+        <button class="about-dot" data-index="3" aria-label="Go to photo 4"></button>
+        <button class="about-dot" data-index="4" aria-label="Go to photo 5"></button>
+    </div>
+</div>
+    <div class="about-text">
+
+            <p class="section-label">ABOUT ME</p>
+
+            <h2>Building things<br><span>from scratch.</span></h2>
+
+            <p>
+                I'm Reiven, a 3rd-year Computer Science student
+                at Philippine Christian University.
+            </p>
+
+            <p>
+                I enjoy building things from scratch and seeing an
+                idea turn into something real. One of the things I
+                enjoy most about Computer Science is being able to
+                create something myself and be proud of what I've built.
+            </p>
+
+            <p>
+                Outside of programming, I enjoy gaming, editing my
+                gaming clips, and sharing them on TikTok. I also enjoy
+                spending time with my friends and doing random, silly
+                things.
+            </p>
+
+            <p>
+                I'm currently developing my skills in Java, Python,
+                web development, and MySQL. In the future, I want to
+                explore Artificial Intelligence and pursue my interest
+                in game development.
+            </p>
+
+        </div>
+
+
+        <div class="about-currently">
+
+    <p class="card-title">CURRENTLY</p>
+
+    <div class="status-grid">
+
+        <div class="status-item">
+            <span>🎓</span>
+            <div>
+                <strong>YEAR LEVEL</strong>
+                <small>3rd Year • Computer Science</small>
+            </div>
+        </div>
+
+        <div class="status-item">
+            <span>💻</span>
+            <div>
+                <strong>LEARNING</strong>
+                <small>Java & Python</small>
+            </div>
+        </div>
+
+        <div class="status-item">
+            <span>🌐</span>
+            <div>
+                <strong>BUILDING</strong>
+                <small>Web Development</small>
+            </div>
+        </div>
+
+        <div class="status-item">
+            <span>🤖</span>
+            <div>
+                <strong>EXPLORING</strong>
+                <small>Artificial Intelligence</small>
+            </div>
+        </div>
+
+        <div class="status-item">
+            <span>🎮</span>
+            <div>
+                <strong>CAREER GOAL</strong>
+                <small>Game Development</small>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+    </div>
+
+</section>
+
+    <!-- Skills Section -->
+<section id="skills" class="skills-section">
+
+    <div class="skills-container">
+
+        <p class="section-label">WHAT I WORK WITH</p>
+
+        <h2>MY <span>SKILLS</span></h2>
+
+        <p class="skills-intro">
+            Technologies and tools I have learned and used
+            throughout my Computer Science studies.
+        </p>
+
+
+        <!-- Programming -->
+        <div class="skill-category netflix-row">
+
+            <h3 class="row-title">PROGRAMMING</h3>
+
+            <div class="row-wrapper">
+                
+
+                <div class="row-track">
+
+                    <div class="skill-card">
+                        <div class="skill-icon">☕</div>
+                        <h4>Java</h4>
+                        <p>Programming</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">🐍</div>
+                        <h4>Python</h4>
+                        <p>Programming</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">JS</div>
+                        <h4>JavaScript</h4>
+                        <p>Programming</p>
+                    </div>
+
+                </div>
+
+                
+            </div>
+
+        </div>
+
+
+        <!-- Web Development -->
+        <div class="skill-category netflix-row">
+
+            <h3 class="row-title">WEB DEVELOPMENT</h3>
+
+            <div class="row-wrapper">
+                
+
+                <div class="row-track">
+
+                    <div class="skill-card">
+                        <div class="skill-icon">🌐</div>
+                        <h4>HTML</h4>
+                        <p>Web Structure</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">🎨</div>
+                        <h4>CSS</h4>
+                        <p>Web Styling</p>
+                    </div>
+
+                </div>
+
+                
+            </div>
+
+        </div>
+
+
+        <!-- Database -->
+        <div class="skill-category netflix-row">
+
+            <h3 class="row-title">DATABASE</h3>
+
+            <div class="row-wrapper">
+                
+
+                <div class="row-track">
+
+                    <div class="skill-card">
+                        <div class="skill-icon">🗄️</div>
+                        <h4>MySQL</h4>
+                        <p>Database Management</p>
+                    </div>
+
+                </div>
+
+                
+            </div>
+
+        </div>
+
+
+        <!-- Tools -->
+        <div class="skill-category netflix-row">
+
+            <h3 class="row-title">DEVELOPMENT TOOLS</h3>
+
+            <div class="row-wrapper">
+                
+
+                <div class="row-track">
+
+                    <div class="skill-card">
+                        <div class="skill-icon">⌨️</div>
+                        <h4>VS Code</h4>
+                        <p>Code Editor</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">💡</div>
+                        <h4>IntelliJ IDEA</h4>
+                        <p>IDE</p>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-icon">☕</div>
+                        <h4>NetBeans</h4>
+                        <p>IDE</p>
+                    </div>
+
+                </div>
+
+                
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+ <!-- Projects Section -->
+<section id="projects" class="projects-section">
+
+    <div class="projects-container">
+
+        <p class="section-label">WHAT I'VE BUILT</p>
+
+        <h2>MY <span>PROJECTS</span></h2>
+
+        <p class="projects-intro">
+            A collection of applications and projects I have
+            developed while learning and exploring Computer Science.
+        </p>
+
+
+        <div class="netflix-row projects-row">
+
+            <div class="row-wrapper">
+                <button class="row-arrow left" aria-label="Scroll left">&#10094;</button>
+
+                <div class="row-track">
+
+                    <!-- Project 1 -->
+                    <div class="netflix-project-card">
+
+                        <div class="project-card-face">
+                            <div class="project-number">01</div>
+                            <p class="project-type">JAVA • DESKTOP APPLICATION</p>
+                            <h3>Sudoku Auto Solver</h3>
+                        </div>
+
+                        <div class="project-hover-info">
+                            <p class="project-type">JAVA • DESKTOP APPLICATION</p>
+                            <h3>Sudoku Auto Solver</h3>
+                            <p class="project-desc">
+                                A Java-based Sudoku solver with a graphical user
+                                interface built using Java Swing. Users can enter
+                                a Sudoku puzzle and automatically solve it using
+                                a recursive backtracking algorithm.
+                            </p>
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>Java Swing</span>
+                                <span>Backtracking</span>
+                                <span>GUI</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Project 2 -->
+                    <div class="netflix-project-card">
+
+                        <div class="project-card-face">
+                            <div class="project-number">02</div>
+                            <p class="project-type">JAVA • SCHOOL PROJECT</p>
+                            <h3>Self-Service Grocery Ordering System</h3>
+                        </div>
+
+                        <div class="project-hover-info">
+                            <p class="project-type">JAVA • SCHOOL PROJECT</p>
+                            <h3>Self-Service Grocery Ordering System</h3>
+                            <p class="project-desc">
+                                A console-based grocery ordering system developed
+                                in Java. The system allows users to browse products,
+                                search for items, manage a shopping cart, apply
+                                discounts, and generate a receipt.
+                            </p>
+                            <div class="project-tags">
+                                <span>Java</span>
+                                <span>OOP</span>
+                                <span>Data Structures</span>
+                                <span>Console Application</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Coming soon card -->
+                    <div class="netflix-project-card coming-soon-card">
+                        <div class="project-card-face">
+                            <div class="project-number">+</div>
+                            <p class="project-type">IN PROGRESS</p>
+                            <h3>More Projects<br>Coming Soon</h3>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="row-arrow right" aria-label="Scroll right">&#10095;</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Education & Achievements Section -->
+
+<section id="education" class="education-section">
+
+    <div class="education-container">
+
+        <p class="section-label">MY JOURNEY</p>
+
+        <h2>EDUCATION & <span>ACHIEVEMENTS</span></h2>
+
+        <p class="education-intro">
+            My academic journey and accomplishments throughout
+            my studies.
+        </p>
+
+
+        <!-- Education -->
+        <div class="education-card">
+
+            <div class="education-year">
+                2024<br>
+                <span>—</span><br>
+                2028
+            </div>
+
+            <div class="education-content">
+
+                <p class="education-type">CURRENT EDUCATION</p>
+
+                <h3>Philippine Christian University</h3>
+
+                <h4>Bachelor of Science in Computer Science</h4>
+
+                <p>
+                    Currently a 3rd-year Computer Science student,
+                    developing skills in programming, databases,
+                    web development, and system administration.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Achievements -->
+        <div class="achievements">
+
+            <p class="education-type">ACHIEVEMENTS</p>
+
+            <div class="achievement-grid">
+
+                <div class="achievement-card">
+                    <span>01</span>
+                    <h3>With Honors</h3>
+                    <p>Grade 12</p>
+                </div>
+
+                <div class="achievement-card">
+                    <span>02</span>
+                    <h3>Dean's Lister</h3>
+                    <p>1st Year College</p>
+                </div>
+
+                <div class="achievement-card">
+                    <span>03</span>
+                    <h3>PEF LDS</h3>
+                    <p>Completioner</p>
+                </div>
+
+                <div class="achievement-card">
+                    <span>04</span>
+                    <h3>Sudoku Placer</h3>
+                    <p>3rd & 5th Place</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Contact Section -->
+<section id="contact" class="contact-section">
+
+    <div class="contact-container">
+
+        <p class="section-label">GET IN TOUCH</p>
+
+        <h2>LET'S <span>CONNECT</span></h2>
+
+        <p class="contact-intro">
+            Interested in working together, talking about programming,
+            or just want to say hello? Feel free to reach out.
+        </p>
+
+
+        <div class="contact-grid">
+
+            <!-- Email -->
+            <a href="mailto:reivensantiago8@gmail.com" class="contact-card">
+
+                <div class="contact-icon">@</div>
+
+                <div>
+                    <p>EMAIL</p>
+                    <h3>reivensantiago8@gmail.com</h3>
+                </div>
+
+            </a>
+
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/soulja.boiiiiii"
+               target="_blank"
+               class="contact-card">
+
+                <div class="contact-icon">f</div>
+
+                <div>
+                    <p>FACEBOOK</p>
+                    <h3>Connect with me</h3>
+                </div>
+
+            </a>
+
+
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@plusnminus"
+               target="_blank"
+               class="contact-card">
+
+                <div class="contact-icon">♪</div>
+
+                <div>
+                    <p>TIKTOK</p>
+                    <h3>@plusnminus</h3>
+                </div>
+
+            </a>
+            <!-- GitHub -->
+            <a href="https://github.com/reivensantiago8-rgb"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-card">
+
+    <div class="contact-icon">GH</div>
+
+    <div>
+        <p>GITHUB</p>
+        <h3>reivensantiago8-rgb</h3>
+    </div>
+
+</a>
+        </div>
+
+
+        <div class="contact-footer">
+            <p>REIVEN JOSH SANTIAGO</p>
+            <span>COMPUTER SCIENCE STUDENT</span>
+        </div>
+
+    </div>
+
+</section>
+<!-- Music Player -->
+<div class="music-player">
+
+<button id="music-minimize" aria-label="Minimize music player">−</button>
+
+    <button id="music-previous" class="music-control" aria-label="Previous song">
+        &#10094;
+    </button>
+
+    <button id="music-toggle" aria-label="Play music">
+        ▶
+    </button>
+
+    <button id="music-next" class="music-control" aria-label="Next song">
+        &#10095;
+    </button>
+
+    <div class="music-info">
+        <p class="music-label">NOW PLAYING</p>
+        <h3 id="music-title">Bakal-Yero</h3>
+        <span id="music-artist">Artist</span>
+    </div>
+
+    <div class="music-volume">
+    <span>🔊</span>
+    <input
+        type="range"
+        id="music-volume"
+        min="0"
+        max="1"
+        step="0.01"
+        value="0.6"
+        aria-label="Music volume"
+    >
+</div>
+
+<input
+    type="range"
+    id="music-progress"
+    min="0"
+    max="100"
+    value="0"
+    step="0.1"
+    aria-label="Music progress"
+>
+
+<div class="music-time">
+    <span id="music-current-time">0:00</span>
+    <span id="music-duration">0:00</span>
+</div>
+
+    <audio id="background-music"></audio>
+
+</div>
+<!-- Footer -->
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <p class="footer-logo">
+            REIVEN<span>.</span>
+        </p>
+
+        <p class="footer-text">
+            COMPUTER SCIENCE STUDENT • FUTURE MILLIONAIRE
+        </p>
+
+        <p class="footer-copy">
+            © 2026 Reiven Josh Santiago. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
