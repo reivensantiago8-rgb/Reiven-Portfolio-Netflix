@@ -547,7 +547,30 @@
     </div>
 
 </section>
+    
+<!-- AI Hand Gesture Recognition -->
+<section id="ai-gesture" class="projects-section">
+    <div class="projects-container">
+        <p class="section-label">MACHINE LEARNING DEMO</p>
+        <h2>AI HAND <span>GESTURE RECOGNITION</span></h2>
+        <p class="projects-intro">
+            Try my Teachable Machine model! Make a hand gesture
+            in front of your webcam and see what the AI recognizes.
+        </p>
 
+        <div class="gesture-demo">
+            <button id="gesture-start" class="btn primary-btn" type="button">
+                START CAMERA
+            </button>
+
+            <p id="gesture-status">Camera is off. Click Start Camera to begin.</p>
+
+            <div id="gesture-webcam"></div>
+            <div id="gesture-predictions"></div>
+        </div>
+    </div>
+</section>
+    
     <!-- Contact Section -->
 <section id="contact" class="contact-section">
 
@@ -705,7 +728,10 @@
     </div>
 
 </footer>
-
+    
+<!-- Teachable Machine Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
 
     <script src="script.js"></script>
 <script>
