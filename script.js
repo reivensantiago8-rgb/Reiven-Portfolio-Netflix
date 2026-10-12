@@ -425,8 +425,10 @@ async function gestureLoop() {
 }
 
 async function predictGesture() {
-    const predictions = await gestureModel.predict(gestureWebcam.canvas);
-
+    const predictions = await gestureModel.predict(gestureWebcam.canvas);  
+    console.log("Model labels:", gestureModel.getClassLabels());
+console.log("Predictions:", predictions);
+    
     predictions.sort((a, b) => b.probability - a.probability);
 
     gesturePredictions.replaceChildren();
