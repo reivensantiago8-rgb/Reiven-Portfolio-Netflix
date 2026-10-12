@@ -363,6 +363,8 @@ document.querySelector('.music-player').addEventListener('click', (event) => {
     ) {
         player.classList.remove('minimized');
     }
+});
+
 // ===================================
 // AI HAND GESTURE RECOGNITION
 // ===================================
