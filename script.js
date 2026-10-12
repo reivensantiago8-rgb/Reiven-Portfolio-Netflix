@@ -363,5 +363,93 @@ document.querySelector('.music-player').addEventListener('click', (event) => {
     ) {
         player.classList.remove('minimized');
     }
+// ===================================
+// AI HAND GESTURE RECOGNITION
+// ===================================
 
-});
+const GESTURE_MODEL_URL =
+    "https://teachablemachine.withgoogle.com/models/zhvORwfzx/";
+
+let gestureModel;
+let gestureWebcam;
+let gestureRunning = false;
+
+const gestureStartButton = document.getElementById("gesture-start");
+const gestureStatus = document.getElementById("gesture-status");
+const gestureWebcamContainer = document.getElementById("gesture-webcam");
+const gesturePredictions = document.getElementById("gesture-predictions");
+
+if (gestureStartButton) {
+    gestureStartButton.addEventListener("click", startGestureRecognition);
+}
+
+async function startGestureRecognition() {
+    if (gestureRunning) return;
+
+    gestureStartButton.disabled = true;
+    gestureStatus.textContent = "Loading model and camera...";
+
+    try {
+        const modelURL = GESTURE_MODEL_URL + "model.json";
+        const metadataURL = GESTURE_MODEL_URL + "metadata.json";
+
+        gestureModel = await tmImage.load(modelURL, metadataURL);
+
+        gestureWebcam = new tmImage.Webcam(320, 320, true);
+        await gestureWebcam.setup();
+        await gestureWebcam.play();
+
+        gestureWebcamContainer.replaceChildren(gestureWebcam.canvas);
+        gestureRunning = true;
+
+        gestureStartButton.textContent = "CAMERA RUNNING";
+        gestureStatus.textContent = "Show a hand gesture to the camera.";
+
+        window.requestAnimationFrame(gestureLoop);
+    } catch (error) {
+        console.error("Gesture recognition error:", error);
+        gestureStatus.textContent =
+            "Unable to start. Allow camera access and try again.";
+        gestureStartButton.disabled = false;
+    }
+}
+
+async function gestureLoop() {
+    if (!gestureRunning) return;
+
+    gestureWebcam.update();
+    await predictGesture();
+    window.requestAnimationFrame(gestureLoop);
+}
+
+async function predictGesture() {
+    const predictions = await gestureModel.predict(gestureWebcam.canvas);
+
+    predictions.sort((a, b) => b.probability - a.probability);
+
+    gesturePredictions.replaceChildren();
+
+    predictions.forEach((prediction) => {
+        const row = document.createElement("div");
+        row.className = "gesture-prediction";
+
+        const label = document.createElement("span");
+        label.textContent = prediction.className;
+
+        const percentage = document.createElement("span");
+        percentage.textContent =
+            Math.round(prediction.probability * 100) + "%";
+
+        const bar = document.createElement("div");
+        bar.className = "gesture-bar";
+
+        const fill = document.createElement("div");
+        fill.className = "gesture-bar-fill";
+        fill.style.width =
+            Math.round(prediction.probability * 100) + "%";
+
+        bar.appendChild(fill);
+        row.append(label, percentage, bar);
+        gesturePredictions.appendChild(row);
+    });
+}
