@@ -3068,3 +3068,48 @@ header.scrolled {
         font-size: 14px;
     }
 }
+
+/* AI GESTURE - FINAL LAYOUT TWEAKS */
+
+#ai-gesture .gesture-demo {
+    max-width: 1000px;
+    margin: 32px auto 0;
+    padding: 24px;
+    gap: 20px;
+}
+
+#ai-gesture #gesture-webcam,
+#ai-gesture #gesture-predictions {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#ai-gesture #gesture-webcam canvas {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+#ai-gesture #gesture-predictions {
+    align-self: stretch;
+    align-content: start;
+    gap: 20px;
+}
+
+#ai-gesture .gesture-prediction {
+    font-size: 14px;
+}
+
+@media (max-width: 700px) {
+    #ai-gesture .gesture-demo {
+        padding: 16px;
+        gap: 16px;
+    }
+
+    #ai-gesture #gesture-webcam canvas {
+        max-width: 100%;
+    }
+}
